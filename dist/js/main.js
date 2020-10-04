@@ -1,0 +1,1 @@
+"use strict";var sayHello=function(){console.log("Hello!")};sayHello();var sayGoodBye=function(){console.log("Good Bye")};sayGoodBye();
