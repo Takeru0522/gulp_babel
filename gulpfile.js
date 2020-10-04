@@ -45,8 +45,9 @@ gulp.task('babel', (cb) => {
 // gulp.task('default', gulp.parallel('message', 'copyHtml', 'sass', 'scripts'));
 gulp.task('default', gulp.parallel('message', 'copyHtml', 'sass', 'babel'));
 
-gulp.task('watch', () => {
+gulp.task('watch', (cb) => {
     gulp.watch('src/*.html', gulp.series('copyHtml'));
     gulp.watch('src/sass/*.scss', gulp.series('sass'));
-    gulp.watch('src/js/*.js', gulp.series('scripts'));
+    gulp.watch('src/js/*.js', gulp.series('babel'));
+    cb();
 })
